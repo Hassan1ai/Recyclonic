@@ -1,0 +1,235 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 142.1 76.2% 36.3%;
+    --primary-foreground: 355.7 100% 97.3%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 142.1 76.2% 36.3%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 142.1 70.6% 45.3%;
+    --primary-foreground: 144.9 80.4% 10%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 142.1 76.2% 36.3%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  /* Font settings */
+  html[lang="en"] body {
+    font-family: var(--font-inter), system-ui, sans-serif;
+  }
+
+  html[lang="ar"] body {
+    font-family: var(--font-noto-sans-arabic), system-ui, sans-serif;
+  }
+}
+
+/* RTL Support */
+[dir="rtl"] {
+  text-align: right;
+}
+
+[dir="rtl"] .mr-1 {
+  margin-right: 0;
+  margin-left: 0.25rem;
+}
+
+[dir="rtl"] .mr-2 {
+  margin-right: 0;
+  margin-left: 0.5rem;
+}
+
+[dir="rtl"] .ml-2 {
+  margin-left: 0;
+  margin-right: 0.5rem;
+}
+
+[dir="rtl"] .mr-4 {
+  margin-right: 0;
+  margin-left: 1rem;
+}
+
+[dir="rtl"] .ml-4 {
+  margin-left: 0;
+  margin-right: 1rem;
+}
+
+[dir="rtl"] .ml-auto {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+[dir="rtl"] .mr-auto {
+  margin-right: 0;
+  margin-left: auto;
+}
+
+[dir="rtl"] .space-x-2 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 1;
+}
+
+[dir="rtl"] .space-x-4 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 1;
+}
+
+[dir="rtl"] .space-x-6 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 1;
+}
+
+[dir="rtl"] .space-x-8 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 1;
+}
+
+[dir="rtl"] .right-0 {
+  right: auto;
+  left: 0;
+}
+
+[dir="rtl"] .left-0 {
+  left: auto;
+  right: 0;
+}
+
+[dir="rtl"] .right-4 {
+  right: auto;
+  left: 1rem;
+}
+
+[dir="rtl"] .left-4 {
+  left: auto;
+  right: 1rem;
+}
+
+/* RTL for flex directions */
+[dir="rtl"] .flex-row {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .justify-start {
+  justify-content: flex-end;
+}
+
+[dir="rtl"] .justify-end {
+  justify-content: flex-start;
+}
+
+[dir="rtl"] .items-start {
+  align-items: flex-end;
+}
+
+[dir="rtl"] .items-end {
+  align-items: flex-start;
+}
+
+/* RTL for text alignment */
+[dir="rtl"] .text-left {
+  text-align: right;
+}
+
+[dir="rtl"] .text-right {
+  text-align: left;
+}
+
+/* RTL for borders */
+[dir="rtl"] .border-l {
+  border-left: none;
+  border-right: 1px solid;
+}
+
+[dir="rtl"] .border-r {
+  border-right: none;
+  border-left: 1px solid;
+}
+
+/* RTL for rounded corners */
+[dir="rtl"] .rounded-l {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-top-right-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
+}
+
+[dir="rtl"] .rounded-r {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-top-left-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem;
+}
+
+/* RTL for transforms */
+[dir="rtl"] .rotate-90 {
+  --tw-rotate: -90deg;
+}
+
+[dir="rtl"] .rotate-180 {
+  --tw-rotate: -180deg;
+}
+
+[dir="rtl"] .rotate-270 {
+  --tw-rotate: -270deg;
+}
+
+/* RTL for icons */
+[dir="rtl"] .transform-flip {
+  transform: scaleX(-1);
+}
