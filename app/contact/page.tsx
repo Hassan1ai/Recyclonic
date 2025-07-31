@@ -54,7 +54,7 @@ export default function ContactPage() {
                 <h3 className="text-xl font-semibold mb-2">{t("contact.phone")}</h3>
                 <p className="text-muted-foreground">{t("contact.phone.description")}</p>
                 <a href="tel:+201234567890" className="mt-2 font-medium text-green-600 dark:text-green-400">
-                  +20 109 995 49075
+                  +20 10 995 49075
                 </a>
                 <p className="text-sm text-muted-foreground mt-1">Available Sunday-Thursday, 9am-5pm</p>
               </div>

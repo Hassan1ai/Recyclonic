@@ -99,33 +99,37 @@ export default function AdminLayout({
                 alt="Reacyclonic Logo"
                 className="rounded-md"
               />
-              <span>Reacyclonic Admin</span>
+              <span>Recyclonic Admin</span>
             </Link>
           </div>
           <div className="flex-1 overflow-auto py-2">
-            <nav className="grid items-start px-4 text-sm font-medium">
-              {navItems.map((item) => (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  className={`flex items-center gap-3 rounded-lg px-3 py-2 transition-all ${
-                    isActive(item.href)
-                      ? "bg-muted text-primary"
-                      : "text-muted-foreground hover:bg-muted hover:text-primary"
-                  }`}
-                >
-                  <item.icon className="h-4 w-4" />
-                  {item.name}
-                </Link>
-              ))}
-            </nav>
-          </div>
-          <div className="mt-auto p-4">
-            <Button variant="outline" className="w-full justify-start gap-2" onClick={handleLogout}>
-              <LogOut className="h-4 w-4" />
-              Logout
-            </Button>
-          </div>
+  <nav className="grid items-start px-4 text-sm font-medium">
+    {navItems.map((item) => (
+      <Link
+        key={item.href}
+        href={item.href}
+        className={`flex items-center gap-3 rounded-lg px-3 py-2 transition-all ${
+          isActive(item.href)
+            ? "bg-muted text-primary"
+            : "text-muted-foreground hover:bg-muted hover:text-primary"
+        }`}
+      >
+        <item.icon className="h-4 w-4" />
+        {item.name}
+      </Link>
+    ))}
+
+    {/* Logout as a nav item */}
+    <button
+      onClick={handleLogout}
+      className="flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground hover:bg-muted hover:text-primary transition-all"
+    >
+      <LogOut className="h-4 w-4" />
+      Logout
+    </button>
+  </nav>
+</div>
+
         </div>
       </div>
       <div className="flex flex-col">
@@ -148,7 +152,7 @@ export default function AdminLayout({
                       alt="Reacyclonic Logo"
                       className="rounded-md"
                     />
-                    <span>Reacyclonic Admin</span>
+                    <span>Recyclonic Admin</span>
                   </Link>
                   <SheetTrigger asChild>
                     <Button variant="ghost" size="icon" className="ml-auto">
