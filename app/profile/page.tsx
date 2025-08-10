@@ -61,10 +61,11 @@ export default function ProfilePage() {
           <h1 className="text-3xl font-bold mb-8">{t("profile.title")}</h1>
 
           <Tabs defaultValue="profile" className="w-full">
-            <TabsList className="grid w-full grid-cols-3 mb-8">
+            <TabsList className="grid w-full grid-cols-4 mb-8">
               <TabsTrigger value="profile">{t("profile.information")}</TabsTrigger>
               <TabsTrigger value="orders">{t("profile.orders")}</TabsTrigger>
               <TabsTrigger value="devices">{t("profile.devices")}</TabsTrigger>
+              <TabsTrigger value="payment">{t("profile.payment") || "Payment Methods"}</TabsTrigger>
             </TabsList>
 
             <TabsContent value="profile">
@@ -226,6 +227,96 @@ export default function ProfilePage() {
                         {t("profile.sell")}
                       </Button>
                     </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </TabsContent>
+
+            <TabsContent value="payment">
+              <Card>
+                <CardHeader>
+                  <CardTitle>{t("profile.payment") || "Payment Methods"}</CardTitle>
+                  <CardDescription>
+                    {t("profile.payment.description") || "Manage your saved payment methods for faster checkout"}
+                  </CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <div className="space-y-4">
+                    <div className="flex items-center justify-between p-4 border rounded-md">
+                      <div className="flex items-center gap-4">
+                        <div className="rounded-md bg-slate-100 dark:bg-slate-800 p-2">
+                          <Avatar className="h-8 w-8">
+                            <AvatarFallback className="bg-green-100 text-green-600">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                strokeWidth="2"
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                className="h-4 w-4"
+                              >
+                                <rect width="20" height="14" x="2" y="5" rx="2" />
+                                <line x1="2" x2="22" y1="10" y2="10" />
+                              </svg>
+                            </AvatarFallback>
+                          </Avatar>
+                        </div>
+                        <div>
+                          <p className="font-medium">Visa •••• 4242</p>
+                          <p className="text-sm text-muted-foreground">Expires 12/25</p>
+                        </div>
+                      </div>
+                      <div>
+                        <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300">
+                          Default
+                        </span>
+                      </div>
+                    </div>
+
+                    <div className="flex items-center justify-between p-4 border rounded-md">
+                      <div className="flex items-center gap-4">
+                        <div className="rounded-md bg-slate-100 dark:bg-slate-800 p-2">
+                          <Avatar className="h-8 w-8">
+                            <AvatarFallback className="bg-blue-100 text-blue-600">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                strokeWidth="2"
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                className="h-4 w-4"
+                              >
+                                <path d="M18.5 13.2c.2 1.6-.2 3-1.1 4.2" />
+                                <path d="M9.5 6.8c-.2-1.6.2-3 1.1-4.2" />
+                                <path d="M9.5 17.2c-.2 1.6.2 3 1.1 4.2" />
+                                <path d="M18.5 6.8c.2-1.6-.2-3-1.1-4.2" />
+                                <path d="M14 6.5c1.1.1 2.2.5 3 1.2" />
+                                <path d="M14 17.5c1.1-.1 2.2-.5 3-1.2" />
+                                <path d="M10 17.5c-1.1-.1-2.2-.5-3-1.2" />
+                                <path d="M10 6.5c-1.1.1-2.2.5-3 1.2" />
+                                <circle cx="14" cy="14" r="1" />
+                                <circle cx="10" cy="10" r="1" />
+                              </svg>
+                            </AvatarFallback>
+                          </Avatar>
+                        </div>
+                        <div>
+                          <p className="font-medium">Fawry</p>
+                          <p className="text-sm text-muted-foreground">01012345678</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <Button
+                      className="w-full bg-green-600 hover:bg-green-700"
+                      onClick={() => router.push("/payment-methods")}
+                    >
+                      Manage Payment Methods
+                    </Button>
                   </div>
                 </CardContent>
               </Card>

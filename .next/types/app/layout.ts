@@ -1,4 +1,4 @@
-// File: C:\Users\Hassan Mohammed\OneDrive\Documents\Recyclonic3\app\layout.tsx
+// File: D:\My Projects\Recyclonic3\app\layout.tsx
 import * as entry from '../../../app/layout.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

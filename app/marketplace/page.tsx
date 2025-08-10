@@ -104,7 +104,7 @@ export default function MarketplacePage() {
               <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />
               <Input type="search" placeholder={t("marketplace.search")} className="pl-8" />
             </div>
-            <Sheet>
+            < >
               <SheetTrigger asChild>
                 <Button variant="outline" size="icon" className="md:hidden">
                   <SlidersHorizontal className="h-4 w-4" />
@@ -151,7 +151,7 @@ export default function MarketplacePage() {
                   <Button className="w-full">{t("marketplace.apply")}</Button>
                 </div>
               </SheetContent>
-            </Sheet>
+            </>
             <Select defaultValue="featured">
               <SelectTrigger className="w-[180px] hidden md:flex">
                 <SelectValue placeholder={t("marketplace.sort")} />

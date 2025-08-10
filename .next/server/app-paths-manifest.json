@@ -1,8 +1,5 @@
 {
-  "/settings/page": "app/settings/page.js",
-  "/contact/page": "app/contact/page.js",
-  "/admin/page": "app/admin/page.js",
-  "/admin/orders/page": "app/admin/orders/page.js",
-  "/admin/pickup-requests/page": "app/admin/pickup-requests/page.js",
-  "/admin/analytics/page": "app/admin/analytics/page.js"
+  "/payment-methods/page": "app/payment-methods/page.js",
+  "/payment-methods/[id]/page": "app/payment-methods/[id]/page.js",
+  "/profile/page": "app/profile/page.js"
 }

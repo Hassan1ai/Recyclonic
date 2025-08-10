@@ -103,9 +103,14 @@ export default function CheckoutPage() {
 
               <Card>
                 <CardHeader>
-                  <CardTitle className="flex items-center gap-2">
-                    <CreditCardIcon className="h-5 w-5 text-green-600" /> Payment Method
-                  </CardTitle>
+                  <div className="flex justify-between items-center">
+                    <CardTitle className="flex items-center gap-2">
+                      <CreditCardIcon className="h-5 w-5 text-green-600" /> Payment Method
+                    </CardTitle>
+                    <Button variant="link" asChild className="text-green-600 hover:text-green-700">
+                      <Link href="/payment-methods">Manage Payment Methods</Link>
+                    </Button>
+                  </div>
                 </CardHeader>
                 <CardContent>
                   <Tabs defaultValue="credit-card" onValueChange={setPaymentMethod}>
