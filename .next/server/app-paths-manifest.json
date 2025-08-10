@@ -1,5 +1,4 @@
 {
-  "/_not-found/page": "app/_not-found/page.js",
   "/payment-methods/page": "app/payment-methods/page.js",
   "/payment-methods/[id]/page": "app/payment-methods/[id]/page.js",
   "/profile/page": "app/profile/page.js"
